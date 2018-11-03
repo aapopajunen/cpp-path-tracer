@@ -7,6 +7,7 @@
 #include "mesh.hpp"
 #include "transform.hpp"
 #include "camera.hpp"
+#include "eventhandler.hpp"
 
 int main(int argc, char *argv[]){
 	int width = 600, height = 480;
@@ -16,6 +17,7 @@ int main(int argc, char *argv[]){
 	Mesh mesh("../models/susanne.obj");
 	Transform transform;
     Camera camera(glm::vec3(0.0f, 0.0f, 0.0f), 70.0f, (float)width/(float)height, 0.01f, 1000.0f);
+	EventHandler eventHandler(&display, &camera);
 	shader.bind();
 	while(display.isOpen()){
 		display.clear();

@@ -46,3 +46,12 @@ void Display::update(){
 bool Display::isOpen(){
 	return !glfwWindowShouldClose(window);
 }
+
+GLFWwindow* Display::getWindow(){
+	return window;
+}
+
+void Display::setDimensions(int w, int h){
+	width = w;
+	height = h;
+}

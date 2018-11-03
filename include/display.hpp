@@ -10,6 +10,8 @@ class Display{
 		void update();
 		bool isOpen();
 		void clear();
+		GLFWwindow* getWindow();
+		void setDimensions(int w, int h);
 	private:
 		GLFWwindow* window;
 		int width;
